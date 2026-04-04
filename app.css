@@ -665,17 +665,23 @@ button {
   position: fixed;
   right: 2rem;
   bottom: 2rem;
-  z-index: 50;
+  z-index: 9999; /* Asegúrate de que esté por encima de todo */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  /* background: var(--gradient-main); */
-  /* color: #ffffff; */
-  /* box-shadow: var(--shadow-strong); */
+  background-color: #25d366; /* El verde oficial de WhatsApp */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease;
+  overflow: hidden; /* Para que la imagen no se salga del círculo */
+}
+
+.floating-whatsapp img {
+  width: 60%; /* Ajusta el tamaño de la imagen dentro del botón */
+  height: auto;
+  display: block;
 }
 
 .floating-whatsapp:hover {
