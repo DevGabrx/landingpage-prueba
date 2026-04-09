@@ -8,12 +8,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="app.css">
+
+  <link rel="icon" type="image/jpg" href="/images/logo.jpg">
+
+
+  <script defer src="app.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <span class="material-symbols-outlined brand-icon">card_giftcard</span>
         <span class="brand-name">Aeterna Momentos</span>
       </div>
 
@@ -21,6 +25,7 @@
         <a href="#catalogo">Catálogo</a>
         <a href="#beneficios">Beneficios</a>
         <a href="#faq">Preguntas</a>
+        <a href="#section instagram-section">Instagram</a>
       </nav>
 
       <a class="button button-gradient button-small" href="https://wa.me/yourlink">Escríbenos</a>
@@ -55,7 +60,7 @@
           <div class="hero-badge">
             <div class="badge-title">
               <span class="material-symbols-outlined filled">star</span>
-              <span>Más de 500 sonrisas</span>
+              <span>Calidad en cada entregaa</span>
             </div>
             <p>Entregamos felicidad en cada rincón de la ciudad.</p>
           </div>
@@ -135,7 +140,7 @@
               <img src="images/regalos.jpg">
             </div>
             <h3>Detalles Personalizados</h3>
-            <p>Descripcion en construccion</p>
+            <p>Creamos piezas únicas diseñadas para reflejar la personalidad de esa persona especial. Desde sus pasiones hasta sus gustos favoritos.</p>
             <button class="button button-gradient button-block" type="button">Pedir Ahora</button>
           </article>
 
@@ -144,7 +149,7 @@
               <img src="images/IMG_20260313_085250677.jpg" alt="Artículos Conmemorativos">
             </div>
             <h3>Artículos Conmemorativos</h3>
-            <p>Descripcion en construccion</p>
+            <p>Nuestros arreglos conmemorativos están pensados para expresar gratitud, amor y alegría en esos momentos que merecen ser recordados para siempre</p>
             <button class="button button-gradient button-block" type="button">Pedir Ahora</button>
           </article>
         </div>
@@ -233,25 +238,25 @@
         </div>
 
         <div class="faq-list">
-          <article class="faq-card">
-            <h3>¿Con cuánta anticipación pido?</h3>
+          <details class="faq-card" open>
+            <summary>¿Con cuánta anticipación pido?</summary>
             <p>Recomendamos al menos 48 horas para desayunos y 72 horas para regalos personalizados complejos. Consultar por pedidos urgentes.</p>
-          </article>
+          </details>
 
-          <article class="faq-card">
-            <h3>¿A qué zonas llegan?</h3>
+          <details class="faq-card">
+            <summary>¿A qué zonas llegan?</summary>
             <p>Cubrimos toda la ciudad de Bogota . El costo de envío varía según la distancia.</p>
-          </article>
+          </details>
 
-          <article class="faq-card">
-            <h3>¿Qué medios de pago aceptan?</h3>
+          <details class="faq-card">
+            <summary>¿Qué medios de pago aceptan?</summary>
             <p>Aceptamos pagos en contraentrega , Nequi/Daviplata y transferencias bancarias</p>
-          </article>
+          </details>
         </div>
       </div>
     </section>
 
-    <section class="section instagram-section">
+       <section class="section instagram-section">
       <div class="container instagram-grid">
         <div class="instagram-images">
           <img class="instagram-image image-tilt-right" src="images/logo2.jpg">
@@ -260,7 +265,11 @@
 
         <div class="instagram-content">
           <h2>Síguenos en Instagram</h2>
-          <p>Descripcion en construccion</p>
+          <ul>
+            <li>Sé el primero en ver nuestras nuevas creaciones</li>
+            <li>¡No te pierdas nuestros lanzamientos! Síguenos para conocer antes que nadie los nuevos diseños de regalos personalizados</li>
+            <li>Contenido exclusivo y preventas solo para nuestra comunidad en Instagram.</li>
+          </ul>
           <a class="instagram-link" href="https://www.instagram.com/aeternamomentos/">
             @aeternamomentos
             <span class="material-symbols-outlined">arrow_forward</span>
@@ -268,12 +277,100 @@
         </div>
       </div>
     </section>
+
+    <section class="section publications-section" id="publicaciones">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2>Nuestras publicaciones recientes</h2>
+            <p>Aqui puedes ver  el contenido más reciente de nuestro feed para que veas ideas, detalles y entregas reales.</p>
+          </div>
+        </div>
+
+        <div class="publications-status" id="publications-status" role="status" aria-live="polite">
+          Cargando publicaciones...
+        </div>
+        <div class="publications-grid" id="publications-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-soft contact-section" id="contacto">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-copy">
+            <span class="eyebrow">Contacto</span>
+            <h2>Cuéntanos la sorpresa que quieres crear</h2>
+            <p>
+              Déjanos tus datos y una idea general de tu pedido. Te contactamos para ayudarte a diseñar una experiencia personalizada con el mismo cuidado de siempre.
+            </p>
+
+            <div class="contact-highlights">
+              <article class="contact-highlight-card">
+                <div class="icon-circle icon-circle-primary">
+                  <span class="material-symbols-outlined">chat</span>
+                </div>
+                <div>
+                  <h3>Respuesta rápida</h3>
+                  <p>Revisamos cada mensaje para orientarte según ocasión, presupuesto y fecha de entrega.</p>
+                </div>
+              </article>
+
+              <article class="contact-highlight-card">
+                <div class="icon-circle icon-circle-secondary">
+                  <span class="material-symbols-outlined">event_available</span>
+                </div>
+                <div>
+                  <h3>Atención personalizada</h3>
+                  <p>Te ayudamos a definir detalles, colores, complementos y mensaje especial para tu regalo.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <form class="contact-form-card">
+            <div class="contact-form-grid">
+              <label class="form-field">
+                <span>Nombre</span>
+                <input type="text" name="nombre" placeholder="Tu nombre completo">
+              </label>
+
+              <label class="form-field">
+                <span>Teléfono</span>
+                <input type="tel" name="telefono" placeholder="Tu número de contacto">
+              </label>
+
+              <label class="form-field">
+                <span>Correo electrónico</span>
+                <input type="email" name="correo" placeholder="tucorreo@email.com">
+              </label>
+
+              <label class="form-field">
+                <span>Tipo de detalle</span>
+                <input type="text" name="detalle" placeholder="Desayuno, regalo, conmemorativo...">
+              </label>
+
+              <label class="form-field form-field-full">
+                <span>Mensaje</span>
+                <textarea name="mensaje" rows="5" placeholder="Cuéntanos para quién es, la fecha y la idea que tienes en mente"></textarea>
+              </label>
+            </div>
+
+            <button class="button button-gradient button-block" type="submit">
+              <span class="material-symbols-outlined">send</span>
+              Enviar solicitud
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+ 
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <div class="brand-name">Recuerdos Aeterna</div>
+        <div class="brand-name">Aeterna Momentos</div>
         <p>Creando memorias inolvidables</p>
       </div>
 
@@ -285,7 +382,7 @@
       </nav>
 
       <div class="footer-copy">
-        <p>© Recuerdos Aeterna - Emprendimiento Familiar</p>
+        <p>© Aeterna Momentos - Emprendimiento Familiar</p>
       </div>
     </div>
   </footer>
